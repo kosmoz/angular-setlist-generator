@@ -1,0 +1,26 @@
+.ng-invalid:not(.ng-untouched):not(form) {
+    border-left: 5px solid #c95250;
+}
+
+.form-inline {
+    text-align: center;
+}
+
+.song-form {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -1rem;
+}
+
+.song-form .song-input {
+    flex: 1 1 auto;
+}
+
+.song-form .song-button {
+    flex: 0 0 auto;
+}
+
+.song-form .song-button,
+.song-form .song-input {
+    padding: 0 1rem;
+}

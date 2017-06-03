@@ -1,0 +1,42 @@
+.song-list, 
+.total {
+    margin: 15px 0;
+}
+
+.song-list .song-list-item, 
+.total {
+    border: solid lightgrey;
+    line-height: 45px;
+    padding: 0 1rem;
+}
+
+.song-list .song-list-item {
+    border-width: 1px 1px 0;
+}
+
+.song-list .song-list-item:first-child {
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+}
+
+.song-list .song-list-item:last-child {
+    border-bottom-width: 1px;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+}
+
+.total {
+    border-width: 1px;
+    border-radius: .4rem;
+    font-weight: bold;
+}
+
+.info {
+    text-align: center;
+    cursor: default;
+}
+
+.info, 
+.recycle-bin {
+    color: darkgrey;
+}

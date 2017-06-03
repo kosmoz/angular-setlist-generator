@@ -1,0 +1,54 @@
+<div class="row">
+
+  <div class="column">
+
+    <div class="song-list" dnd-sortable-container [sortableData]="songs" [dropZones]="['song-zone']">
+      <div class="song-list-item info" *ngIf="!songs.length">
+        Add some songs, bro!
+      </div>
+      <div class="song-list-item" *ngFor="let song of songs; let i = index" dnd-sortable [sortableIndex]="i">
+        <div class="row">
+          <div class="column">
+            {{song.title}}
+          </div>
+          <div class="column">
+            {{song.duration | duration}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="total">
+      <div class="row">
+        <div class="column">
+          Total
+        </div>
+        <div class="column">
+          {{totalDuration | duration}}
+        </div>
+      </div>
+    </div>
+
+    <app-song-form (addSong)="songs.push($event)"></app-song-form>
+
+  </div>
+
+  <div class="column">
+    <div class="song-list recycle-bin" dnd-sortable-container [sortableData]="disabledSongs" [dropZones]="['song-zone']">
+      <div class="song-list-item info" *ngIf="!disabledSongs.length">
+        Drag a song here to remove it from the list.
+      </div>
+      <div class="song-list-item" *ngFor="let song of disabledSongs; let i = index" dnd-sortable [sortableIndex]="i">
+        <div class="row">
+          <div class="column">
+            {{song.title}}
+          </div>
+          <div class="column">
+            {{song.duration | duration}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+.logo {
+    margin: 1cm auto 0;
+    display: block;
+    max-height: 3.6cm;
+    max-width: 80%;
+}
+
+hr {
+    border-color: black;
+    margin: 1.5rem 10%;
+}
+
+.gig-info {
+    text-align: center;
+}
+
+.songs {
+    margin-top: 1cm;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family: Eczar, serif;
+}
+
+.info {
+    text-align: center;
+}

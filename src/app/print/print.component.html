@@ -1,0 +1,15 @@
+<img class="logo" [src]="logoService.logoSrc" *ngIf="logoService.logoSrc">
+
+
+<div class="gig-info" *ngIf="gigDataService.date || gigDataService.venue">
+  <hr *ngIf="logoService.logoSrc">
+  {{gigDataService.venue}}
+  <ng-container *ngIf="gigDataService.date && gigDataService.venue">&mdash;</ng-container>
+  {{gigDataService.date | date}}
+</div>
+
+<div class="songs">
+  <h1 *ngFor="let song of songs">{{song.title}}</h1>
+</div>
+
+<div class="info" *ngIf="!songs.length">Looks like you don't have any songs yet. Go add some!</div>

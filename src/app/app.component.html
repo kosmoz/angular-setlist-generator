@@ -1,0 +1,15 @@
+<div class="container no-print">
+  <h1>Setlist Generator</h1>
+  <app-song-list [songs]="songs"></app-song-list>
+</div>
+
+<div class="controls no-print">
+  <input type="text" style="width: 200px;" placeholder="My Metal Pub" [(ngModel)]="gigDataService.venue">
+  <input type="date" [(ngModel)]="gigDataService.date">
+  <app-logo-chooser></app-logo-chooser>
+  <button class="button float-right" (click)="print()" [disabled]="!songs.length">Print!</button>
+</div>
+
+<div class="container print">
+  <app-print [songs]="songs"></app-print>
+</div>

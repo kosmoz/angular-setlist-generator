@@ -1,0 +1,4 @@
+<button class="button button-outline" (click)="logoChooser.click()">Add logo</button>
+<input type="file" accept="image/*" style="display: none;" (change)="onChange($event)" #logoChooser>
+<img class="logo-preview" alt="Logo preview" [src]="logoService.logoSrc" title="Click to remove logo"
+     *ngIf="logoService.logoSrc" (click)="logoService.reset()">

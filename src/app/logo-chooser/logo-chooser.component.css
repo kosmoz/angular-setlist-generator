@@ -1,0 +1,10 @@
+.logo-preview {
+    display: inline-block;
+    height: 3.8rem;
+    margin-bottom: -1.5rem;
+    cursor: pointer;
+}
+
+button {
+    margin-bottom: 0;
+}

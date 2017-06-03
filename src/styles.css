@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://fonts.googleapis.com/css?family=Eczar);
+
+body {
+    margin-bottom: 10rem;
+}
+
+@media screen {
+    .print {
+        display: none;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    .no-print * {
+        display: none;
+    }
+}
+
+input[type=date] {
+    height: 3.8rem;
+    border-radius: .4rem;
+    padding: .6rem 1rem;
+    border: .1rem solid #d1d1d1;
+    box-sizing: inherit;
+}
+
+input[type=date]:focus {
+    border-color: #9b4dca;
+    outline: 0;
+}
+
+#font-loader {
+    position: absolute; 
+    top: -100px;
+    font-family: Eczar; 
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

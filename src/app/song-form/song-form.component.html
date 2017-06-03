@@ -1,0 +1,13 @@
+<form class="song-form" (submit)="onSubmit(); songForm.reset()" #songForm="ngForm">
+  <div class="song-input">
+    <label class="sr-only">Name</label>
+    <input type="text" placeholder="My Awesome Song" [(ngModel)]="song.title" name="title" required>
+  </div>
+  <div class="song-input">
+    <label class="sr-only">Duration</label>
+    <input type="text" placeholder="3m40s" [(ngModel)]="song.durationAsString" name="durationAsString" required>
+  </div>
+  <div class="song-button">
+    <button type="submit" class="button button-primary">Add</button>
+  </div>
+</form>
